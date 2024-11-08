@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: "#E60012",
         secondary: "#D88E51",
+        base: "#f5f5f5",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"], // Menjadikan Inter sebagai font default
