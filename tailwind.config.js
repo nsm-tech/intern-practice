@@ -2,7 +2,17 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#E60012",
+        secondary: "#D88E51",
+        base: "#f5f5f5",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Menjadikan Inter sebagai font default
+        bodoni: ["Bodoni MT", "serif"],
+      },
+    },
   },
   plugins: [],
 };
