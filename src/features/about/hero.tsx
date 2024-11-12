@@ -1,5 +1,5 @@
 import React from "react";
-import Bg from "../../assets/hero.png";
+import Bg from "/hero.png";
 
 const Hero: React.FC = () => {
   return (
