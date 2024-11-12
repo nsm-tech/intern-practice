@@ -1,4 +1,5 @@
 import React from "react";
+import { LOCATION_DESC } from "./constants";
 
 const Loc: React.FC = () => {
   return (
@@ -8,66 +9,21 @@ const Loc: React.FC = () => {
           Location
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10 md:mt-20">
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
-          <div className="bg-white w-full shadow-lg p-7 space-y-4">
-            <h2 className="text-2xl md:text-5xl font-bodoni">Pacific Place</h2>
-            <p className="font-bold">5th Floor Unit 36</p>
-            <p>
-              Pacific Place Mall B1, SCBD Lot 3-5, Jl. Jend. Sudirman Kav.
-              52-53, Kebayoran Baru, Jakarta Selatan 12190
-            </p>
-            <p>(+62) 218274992</p>
-            <p>10:00 - 22:00</p>
-          </div>
+          {LOCATION_DESC.map((loc) => (
+            <div className="bg-white rounded-md w-full shadow-lg p-7 space-y-4">
+              <h2 className="text-2xl md:text-5xl font-bodoni">{loc.adress}</h2>
+              <p className="font-bold">{loc.floor}</p>
+              <p>{loc.street}</p>
+              <div className="flex flex-row">
+                <img src="./phone.png" className="mr-3" />
+                <p>{loc.phone}</p>
+              </div>
+              <div className="flex flex-row">
+                <img src="./clock.png" className="mr-3" />
+                <p>{loc.time}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

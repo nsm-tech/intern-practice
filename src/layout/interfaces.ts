@@ -1,19 +1,19 @@
-export interface NavLink {
+export interface INavLink {
   href: string;
   title: string;
 }
 
-export interface PolicyLink {
+export interface IPolicyLink {
   href: string;
   title: string;
 }
 
-export interface ContactLink {
+export interface IContactLink {
   href: string;
   title: string;
 }
 
-export interface SocialLink {
+export interface ISocialLink {
   href: string;
   icon: string;
 }

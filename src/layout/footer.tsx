@@ -1,6 +1,10 @@
 import React from "react";
-import Logo from "../assets/footer.png";
-import { navLinks, policyLink, contactLink, socialLinks } from "./constants";
+import {
+  NAV_LINKS,
+  POLICY_LINKS,
+  SOCIAL_LINKS,
+  CONTACT_LINKS,
+} from "./constants";
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="flex flex-col md:flex-row md:justify-between justify-start items-center mb-6">
         <div className="mb-4 md:mb-0">
           <a href="/" className="text-2xl font-bold hover:text-blue-200">
-            <img src={Logo} alt="Logo" className="sm:h-20 h-14 w-auto" />
+            <img src="footer.png" alt="Logo" className="sm:h-20 h-14 w-auto" />
           </a>
         </div>
         <div className="flex font-bold text-lg sm:text-2xl">
@@ -24,7 +28,7 @@ const Footer: React.FC = () => {
             More Info
           </a>
           <div className="flex flex-col mt-2 space-y-2 text-lg text-black">
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -41,7 +45,7 @@ const Footer: React.FC = () => {
             Policy
           </a>
           <div className="flex flex-col mt-2 space-y-2 text-lg text-black">
-            {policyLink.map((link) => (
+            {POLICY_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -58,7 +62,7 @@ const Footer: React.FC = () => {
             Contact Us
           </a>
           <div className="flex flex-col mt-2 space-y-2 text-lg text-black">
-            {contactLink.map((link) => (
+            {CONTACT_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -72,7 +76,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="flex justify-start sm:justify-end space-x-2 mb-6">
-        {socialLinks.map((link) => (
+        {SOCIAL_LINKS.map((link) => (
           <a
             key={link.href}
             href={link.href}
@@ -89,7 +93,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="text-start text-black font-bold text-base mt-6">
-        Copyright ©️ 2024 NSM. All Rights Reserved
+        Copyright ©️ 2024 Bynsm.io All Rights Reserved
       </div>
     </footer>
   );

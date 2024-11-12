@@ -1,7 +1,5 @@
-// src/components/Navbar.tsx
 import React, { useState } from "react";
-import Logo from "../assets/logo.png";
-import { navLinks } from "./constants";
+import { NAV_LINKS } from "./constants";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +11,10 @@ const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-between items-center bg-black p-4 sm:pl-8 sm:pr-32 shadow-md relative">
       <div>
-        <img src={Logo} alt="Logo" className="h-7 sm:h-20" />
+        <img src="logo.png" alt="Logo" className="h-7 sm:h-20" />
       </div>
       <div className="hidden sm:flex space-x-10 text-2xl text-white font-normal">
-        {navLinks.map((link) => (
+        {NAV_LINKS.map((link) => (
           <a key={link.href} href={link.href} className="hover:text-primary">
             {link.title}
           </a>
@@ -41,7 +39,7 @@ const Navbar: React.FC = () => {
       </div>
       {isOpen && (
         <div className="sm:hidden absolute top-full left-0 w-full bg-black text-white space-y-5 py-2 px-8">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
