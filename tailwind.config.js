@@ -9,7 +9,7 @@ export default {
         base: "#f5f5f5",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"], // Menjadikan Inter sebagai font default
+        sans: ["Inter", "sans-serif"],
         bodoni: ["Bodoni MT", "serif"],
       },
     },
