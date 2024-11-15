@@ -1,36 +1,40 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import HeroImage1 from "../../assets/hero/hero1.png";
-import HeroImage2 from "../../assets/hero/hero2.png";
-import HeroImage3 from "../../assets/hero/hero3.png";
-import HeroImage4 from "../../assets/hero/hero4.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
-const Test: React.FC = () => {
+const images = [
+  { src: "hero1.png", alt: "Image 1" },
+  { src: "hero2.png", alt: "Image 2" },
+  { src: "hero3.png", alt: "Image 3" },
+  { src: "hero4.png", alt: "Image 4" },
+];
+
+const Carousel: React.FC = () => {
   return (
-    <div className="relative w-full max-w-full">
-      <Carousel
-        showArrows={true}
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        interval={5000}
-        showStatus={false}
-        swipeable={true}
+    <section className="relative w-full">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        loop={true}
+        spaceBetween={30}
+        slidesPerView={1}
+        className="w-full"
       >
-        {[HeroImage1, HeroImage2, HeroImage3, HeroImage4].map(
-          (image, index) => (
-            <div key={index} className="w-full">
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          )
-        )}
-      </Carousel>
-    </div>
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-[360px] object-cover md:h-[628px]"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 
-export default Test;
+export default Carousel;
