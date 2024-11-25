@@ -1,4 +1,4 @@
-import { ILocation } from "./types";
+import { ILocation } from "./interfaces";
 
 export const LOCATION_DESC: ILocation[] = [
   {
