@@ -2,7 +2,7 @@ import React from "react";
 
 const Features: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100 text-center">
+    <section className="py-16 bg-gray-100 text-center mt-8">
       <div className="container mx-auto px-8">
         <div>
           <h2 className="md:text-7xl text-3xl font-bodoni">Buffet Step</h2>
